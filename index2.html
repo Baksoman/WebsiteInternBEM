@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Intern BEM</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="slider">
+            <div class="slides" style="--img: url('picture/photo1.png')">
+                <div class="content">
+                    <h2>Max Tysone</h2>
+                    <p id="desc1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt facere voluptatum ea unde earum dignissimos!</p>
+                        <div class="logo1">
+                        <a href="https://www.instagram.com/" target="_blank" title="Go to Instagram">
+                        <i style="color: white;" data-feather="instagram"></i></a>
+                        <a href="https://id.linkedin.com/" target="_blank" title="Go to Linkedin">
+                        <i style="color: white;" data-feather="linkedin"></i></a>
+                        <a href="https://www.whatsapp.com/?lang=id_ID" target="_blank" title="Go to Whatsapp">
+                        <i style="color: white;" data-feather="phone"></i></a>
+                        </div>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('/picture/photo2.jpg')">
+                <div class="content">
+                    <h2>Vena Habibie</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt facere voluptatum ea unde earum dignissimos!</p>
+                    <div class="logo2">
+                        <a href="https://www.instagram.com/" target="_blank" title="Go to Instagram">
+                        <i style="color: white;" data-feather="instagram"></i></a>
+                        <a href="https://id.linkedin.com/" target="_blank" title="Go to Linkedin">
+                        <i style="color: white;" data-feather="linkedin"></i></a>
+                        <a href="https://www.whatsapp.com/?lang=id_ID" target="_blank" title="Go to Whatsapp">
+                        <i style="color: white;" data-feather="phone"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('/picture/photo3.jpg')">
+                <div class="content">
+                    <h2>James Hamilton</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt facere voluptatum ea unde earum dignissimos!</p>
+                    <div class="logo3">
+                        <a href="https://www.instagram.com/" target="_blank" title="Go to Instagram">
+                        <i style="color: white;" data-feather="instagram"></i></a>
+                        <a href="https://id.linkedin.com/" target="_blank" title="Go to Linkedin">
+                        <i style="color: white;" data-feather="linkedin"></i></a>
+                        <a href="https://www.whatsapp.com/?lang=id_ID" target="_blank" title="Go to Whatsapp">
+                        <i style="color: white;" data-feather="phone"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('/picture/photo4.jpg')">
+                <div class="content">
+                    <h2>Alex Huang</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt facere voluptatum ea unde earum dignissimos!</p>
+                    <div class="logo4">
+                        <a href="https://www.instagram.com/" target="_blank" title="Go to Instagram">
+                        <i style="color: white;" data-feather="instagram"></i></a>
+                        <a href="https://id.linkedin.com/" target="_blank" title="Go to Linkedin">
+                        <i style="color: white;" data-feather="linkedin"></i></a>
+                        <a href="https://www.whatsapp.com/?lang=id_ID" target="_blank" title="Go to Whatsapp">
+                        <i style="color: white;" data-feather="phone"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('/picture/photo5.jpg')">
+                <div class="content">
+                    <h2>Alang Alang</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt facere voluptatum ea unde earum dignissimos!</p>
+                    <div class="logo5">
+                        <a href="https://www.instagram.com/" target="_blank" title="Go to Instagram">
+                        <i style="color: white;" data-feather="instagram"></i></a>
+                        <a href="https://id.linkedin.com/" target="_blank" title="Go to Linkedin">
+                        <i style="color: white;" data-feather="linkedin"></i></a>
+                        <a href="https://www.whatsapp.com/?lang=id_ID" target="_blank" title="Go to Whatsapp">
+                        <i style="color: white;" data-feather="phone"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        let slider = document.querySelector('.slider');
+
+        next.addEventListener('click', function(){
+            let slides = document.querySelectorAll('.slides');
+            slider.appendChild(slides[0]);
+        })
+        prev.addEventListener('click', function(){
+            let slides = document.querySelectorAll('.slides');
+            slider.prepend(slides[slides.length-1]);
+        })
+    </script>
+</body>
+</html>
